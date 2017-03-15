@@ -28,7 +28,7 @@ LOCAL_REQUIRED_MODULES := \
         libwebviewchromium_loader \
         libwebviewchromium_plat_support
 
-ifneq (,$(findstring kylepro,$(TARGET_DEVICE)))
+ifneq (,$(findstring logan logands,$(TARGET_DEVICE)))
     LOCAL_MODULE_TARGET_ARCH := arm
     LOCAL_SRC_FILES := prebuilt/arm/webview_brcm.apk
 
