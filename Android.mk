@@ -28,7 +28,9 @@ LOCAL_REQUIRED_MODULES := \
         libwebviewchromium_loader \
         libwebviewchromium_plat_support
 
-ifneq (,$(findstring logan logands,$(TARGET_DEVICE)))
+SAMSUNG_TARGETS := logan logands
+ 
+ifneq ($(filter $(SAMSUNG_TARGETS),$(TARGET_DEVICE)),)
     LOCAL_MODULE_TARGET_ARCH := arm
     LOCAL_SRC_FILES := prebuilt/arm/webview_brcm.apk
 
